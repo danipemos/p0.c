@@ -1,10 +1,13 @@
 #include <stdio.h>
 #include <string.h>
 #define N 48
+void leerEntrada(char *cadena);
+int TrocearCadena(char *cadena, int *trozos[]);
+int ProcesarEntrada(char *trozos[], int trozos);
 
 
 int main (){
-    int salir=0,  Trocear,  Salir;
+    int salir=0;
     char Leer;
     char cadena[N] ;
     char *trozos[N/2];
@@ -12,9 +15,9 @@ int main (){
 
     while ( salir!= 1){
         leerEntrada(cadena);
-        int ntrozos= TrocearEntrada(cadena, trozos);
+        int ntrozos= TrocearCadena(cadena, trozos);
 
-        salir=procesarEntrada(trozos, ntrozos);
+        salir=ProcesarEntrada(trozos, ntrozos);
 
     }
 }
@@ -35,4 +38,4 @@ int TrocearCadena(char * cadena, char * trozos[])
     return i;
 }
 
-int ProcesarEntr
+int ProcesarEntrada(){}
